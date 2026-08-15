@@ -83,7 +83,7 @@ JOIN order_category AS oc
 WHERE r.review_score IS NOT NULL
   AND o.order_status = 'Delivered'
 GROUP BY review_month, oc.category_name
-ORDER BY review_month, csat_pct DESC; 
+ORDER BY review_month DESC, total_review_count DESC, csat_pct ASC;
 
 
 
